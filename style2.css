@@ -47,7 +47,7 @@
 .head_background {
     width: 100%;
     padding: 80px 0;
-    background-image: url(img/bg2.png);
+    background-image: url(img/header1.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -130,7 +130,7 @@
     justify-content: space-between;
     width: 49%;
     margin: 0 0 20px 0;
-    background-color: #F2F2F2
+    background-color: rgb(117, 117, 117, 0.1)
 }
 .card_main_description_container {
     display: flex;
@@ -199,7 +199,7 @@
     line-height: 15px;
     padding: 12px 128px 12px 48px;
     border: none;
-    background-image: url(img/worldarrow.png);
+    background-image: url(../img/world.png);
     background-size: contain;
     background-position: center;
     appearance: none;
@@ -300,7 +300,7 @@ a:visited, a:link, a:active {
         width: 100%;
     }
     .language {
-        background-image: url(img/worldarrow.png);
+        background-image: url(../img/halfworld.png);
         padding: 12px 74px 12px 48px;
     }
     .footer_download {
