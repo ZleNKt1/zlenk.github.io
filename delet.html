@@ -1,0 +1,62 @@
+<ul id="source-list">
+    <li>Элемент 1_</li>
+    <li>Элемент 2_</li>
+    <li>Элемент 3_</li>
+    <li>Элемент 4_</li>
+  </ul>
+  
+  <ul id="destination-list">
+    <!-- Здесь будут добавлены элементы -->
+  </ul>
+  
+  <button id="add-button">Добавить элементы</button>
+  
+  <script>
+
+
+var addButton = document.getElementById('add-button');
+addButton.addEventListener('click', function() {
+  var sourceList = document.getElementById('source-list');
+  var destinationList = document.getElementById('destination-list');
+
+  var sourceItems = sourceList.getElementsByTagName('li');
+  var destinationItems = destinationList.getElementsByTagName('li');
+
+  for (var i = 0; i < sourceItems.length; i++) {
+    var currentItem = sourceItems[i].textContent;
+    var alreadyExists = false;
+
+    for (var j = 0; j < destinationItems.length; j++) {
+      if (destinationItems[j].textContent === currentItem) {
+        alreadyExists = true;
+        // Увеличение количества при повторении элемента
+        var countElement = destinationItems[j].querySelector('.count');
+        var count = parseInt(countElement.textContent) || 0;
+        count++;
+        countElement.textContent = count;
+        break;
+      }
+    }
+
+    if (!alreadyExists) {
+      var newListItem = document.createElement('li');
+      newListItem.textContent = currentItem;
+
+      var countSpan = document.createElement('span');
+      countSpan.className = 'count';
+      countSpan.textContent = '1';
+      newListItem.appendChild(countSpan);
+
+      destinationList.appendChild(newListItem);
+
+
+        localStorage.setItem('destinationList', destinationList.innerHTML);
+
+    }
+  }
+});
+
+
+
+
+  </script>
