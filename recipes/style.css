@@ -1,0 +1,212 @@
+@font-face {
+  font-family: 'monteserrat';
+  src: url('fonts/Montserrat/Montserrat-VariableFont_wght.ttf');
+  
+  font-family: "BadScript";
+  src: url('/fonts/BadScript-Regular.ttf'); 
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 1280px;
+  margin:50px auto;
+
+}
+
+.basket {
+  box-shadow: 1px 1px 10px rgba(0,0,0,0.3);
+  padding: 10px;
+}
+
+.basket li{
+  list-style-type: none;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.basket-btn {
+  
+  margin-left: 8px;
+  background-color: rgb(255, 0, 0);
+  border: none;
+  cursor: pointer;
+  padding: 3px;
+  border-radius: 5px;
+}
+
+.basket-btn:hover {
+  background-color: rgb(255, 0, 0);
+  border: none;
+  filter: brightness(0.8);
+}
+.basket-btn:active {
+  border: none;
+  filter: brightness(1.5);
+}
+
+.recipes {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  padding: 0 20px;
+  gap: 20px;
+}
+
+.title {
+  margin-bottom: 20px;
+  text-align: center;
+  font-family: BadScript;
+  font-size: 40px;
+}
+
+.subtitle {
+  text-align: center;
+  margin: 20px;
+  font-family: BadScript;
+  font-size: 35px;
+}
+
+.instruction{
+  padding: 20px 20px 30px 0px;
+  }
+
+.recipe-container {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+
+
+}
+
+.recipe-text {
+  
+
+  /* max-width: 40%; */
+  text-align: left;
+  font-size: 22px;
+  /* margin-left: 20px; */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px;
+  justify-content: space-between
+  /* flex-direction: column; */
+  /* line-height: 1px; */
+}
+
+.btn {
+
+  align-self: center;
+  padding: 10px;
+  border-radius: 10px;
+  width: 50px;
+  height: 50px;
+  background-color: rgb(128, 240, 76);
+  font-size: 40px;
+  line-height: 0px;
+}
+
+
+
+
+
+.steps {
+  grid-column-start: 1;
+  grid-column-end: 3;
+
+
+}
+
+
+.recipe-image {
+  max-width: 550px;
+  /* width: 70%; */
+  height: 100%;  
+  padding: 30px;
+  border-radius: 40px;
+  align-self: center;
+
+}
+
+.step {
+  margin-bottom: 20px;
+  /* display: flex; */
+  align-items: center;
+  padding: 20px 20px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+}
+
+.steps-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  grid-auto-rows: min-content;
+}
+
+.step-image {
+  /* max-width: 300px; */
+  width: 100%;
+  height: auto;
+  margin-right: 20px;
+  /* float: left; */
+}
+
+.step-text {
+  /* max-width: 40%; */
+  text-align: left;
+  font-size: 20px;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+
+.line {
+  flex-grow: 1;
+  height: 2px;
+  background-color: black;
+}
+
+
+
+.back-to-top {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.back-to-top:hover {
+  background-color: #555;
+}
+
+
+
+
+
+/* 
+
+<div class="step">
+  <img class="step-image" src="/img/sirnik/step-10.jpg" alt="Шаг 1">
+  <div class="step-text">
+    <p>
+
+    </p>
+  </div>
+</div>
+
+
+*/
